@@ -32,6 +32,15 @@ const users = [
     },
 ]
 
-for (const iterator of object) {
-    
+let sum = 0;
+let count = 0;
+
+for (const user of users) {
+  for (const key in user.favoritesSounds) {
+    sum += user.favoritesSounds[key].volume;
+    count++;
+  }  
 }
+
+console.log(sum / count);
+
